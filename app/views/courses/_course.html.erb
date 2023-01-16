@@ -1,0 +1,28 @@
+<div class="course-card-container" id="<%= dom_id course %>">
+ <div>
+<iframe width="460" height="315" src="<%= course.url %>"
+ title="YouTube video player" frameborder="0" allow="accelerometer; 
+ autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+ allowfullscreen>
+ </iframe>
+</div>
+<div class="course-card-info">
+  <p>
+    <strong>Title:</strong>
+    <%= course.title %>
+  </p>
+
+  <p>
+    <strong>Author:</strong>
+    <%= course.author %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= course.description %>
+  </p>
+    <p>
+      <%= link_to "Show this course", course %>
+    </p>
+    </div>
+</div>

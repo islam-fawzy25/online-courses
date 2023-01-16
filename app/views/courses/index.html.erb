@@ -1,0 +1,13 @@
+
+<div id="courses">
+<p style="color: green"><%= notice %></p>
+
+<h1>Courses</h1>
+<div>
+<%= link_to "New course", new_course_path %>
+</div>
+  <% @courses.each do |course| %>
+    <%= render course %>
+  <% end %>
+</div>
+

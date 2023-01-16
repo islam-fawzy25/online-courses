@@ -1,0 +1,29 @@
+
+
+<p style="color: green"><%= notice %></p>
+
+  <%= link_to "Back to courses", courses_path %>
+ 
+<%= render @course %>
+
+<div class="edit-delete-buttons-container">
+  <%= link_to "Edit this course", edit_course_path(@course) %> |
+  <%= button_to "Destroy this course", @course, method: :delete %>
+  </div>
+<div class="episodes-container">
+  <p>Episodes</p>
+  <% @episodes.each do |episode| %>
+  <div class="episode-card">
+    <p><%= episode.title %></p>
+ <div>
+<iframe width="460" height="315" src="<%= episode.url %>"
+ title="YouTube video player" frameborder="0" allow="accelerometer; 
+ autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+ allowfullscreen>
+ </iframe>
+</div>
+    <p><%= episode.description %></p>
+    </div>
+   <%end %>
+  </div>
+ 
