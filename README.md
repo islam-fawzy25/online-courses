@@ -1,10 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 🏁 Getting Started
+First clone the repo on your local machine using a terminal or a git client.
 
-Things you may want to cover:
-
+#### Database setup
+ `rails db:migrate`   
+  `rails db:seed`     
+  
+#### Run App
+ `rails s`   and open browser on `http://localhost:3000/` 
+ 
 * Ruby version
 
 * System dependencies
