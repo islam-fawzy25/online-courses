@@ -9,7 +9,8 @@ class CoursesController < ApplicationController
   # GET /courses/1 or /courses/1.json
   def show
     @episodes= Episode.where(course_id: params[:id])
-    @courseById= Course.find{ |obj| obj.id == params[:id].to_i }
+    @courseById= Course.find{ |obj| obj.id == params[:id].to_i}
+   
   end
 
   # GET /courses/new

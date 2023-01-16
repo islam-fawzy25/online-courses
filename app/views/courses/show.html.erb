@@ -3,8 +3,33 @@
 <p style="color: green"><%= notice %></p>
 
   <%= link_to "Back to courses", courses_path %>
+<div class="course-card-container" >
+ <div>
+<iframe width="460" height="315" src="<%=  @courseById.url %>"
+ title="YouTube video player" frameborder="0" allow="accelerometer; 
+ autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+ allowfullscreen>
+ </iframe>
+</div>
+<div class="course-card-info">
+  <p>
+    <strong>Title:</strong>
+    <%=  @courseById.title %>
+  </p>
+
+  <p>
+    <strong>Author:</strong>
+    <%=  @courseById.author %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%=  @courseById.description %>
+  </p>
  
-<%= render @course %>
+    </div>
+</div>
+
 
 <div class="edit-delete-buttons-container">
   <%= link_to "Edit this course", edit_course_path(@course) %> |
